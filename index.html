@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Work Day Scheduler</title>
+</head>
+
+<body>
+  <header class="text-center my-4">
+    <h1 class="display-3">Work Day Scheduler</h1>
+    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <p id="currentDay" class="lead"></p>
+  </header>
+
+  <div class="container">
+    <!-- Navigation Section -->
+    <div class="row text-center mb-4">
+      <div class="col">
+        <button id="prevDay" class="btn btn-secondary">
+          <i class="fas fa-chevron-left"></i> Previous Day
+        </button>
+      </div>
+      <div class="col">
+        <h2 id="currentDate"></h2>
+      </div>
+      <div class="col">
+        <button id="nextDay" class="btn btn-secondary">
+          Next Day <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Time Blocks Section -->
+    <div class="row gy-3">
+      <!-- Each row represents one time slot -->
+      <div class="col-12 d-flex align-items-center" id="9">
+        <div class="time-block p-2 col-2 text-center" id="9am">9AM</div>
+        <textarea id="time-slot1" class="activity flex-grow-1"></textarea>
+        <button class="saveBtn btn btn-success mx-1">
+          <i class="far fa-save"></i>
+        </button>
+        <button class="deleteBtn btn btn-danger">
+          <i class="far fa-trash-alt"></i>
+        </button>
+      </div>
+
+      <div class="col-12 d-flex align-items-center" id="10">
+        <div class="time-block p-2 col-2 text-center" id="10am">10AM</div>
+        <textarea id="time-slot2" class="activity flex-grow-1"></textarea>
+        <button class="saveBtn btn btn-success mx-1">
+          <i class="far fa-save"></i>
+        </button>
+        <button class="deleteBtn btn btn-danger">
+          <i class="far fa-trash-alt"></i>
+        </button>
+      </div>
+
+      <!-- Repeating structure for other time blocks -->
+      <div class="col-12 d-flex align-items-center" id="11">
+        <div class="time-block p-2 col-2 text-center" id="11am">11AM</div>
+        <textarea id="time-slot3" class="activity flex-grow-1"></textarea>
+        <button class="saveBtn btn btn-success mx-1">
+          <i class="far fa-save"></i>
+        </button>
+        <button class="deleteBtn btn btn-danger">
+          <i class="far fa-trash-alt"></i>
+        </button>
+      </div>
+
+      <!-- Similar rows for 12PM, 1PM, ..., 5PM -->
+      <!-- Example for 12PM -->
+      <div class="col-12 d-flex align-items-center" id="12">
+        <div class="time-block p-2 col-2 text-center" id="12pm">12PM</div>
+        <textarea id="time-slot4" class="activity flex-grow-1"></textarea>
+        <button class="saveBtn btn btn-success mx-1">
+          <i class="far fa-save"></i>
+        </button>
+        <button class="deleteBtn btn btn-danger">
+          <i class="far fa-trash-alt"></i>
+        </button>
+      </div>
+
+      <!-- Add similar blocks for 1PM to 5PM -->
+
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+  <script src="assets/js/index.js"></script>
+</body>
+
+</html>
